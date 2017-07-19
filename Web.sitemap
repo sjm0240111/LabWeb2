@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="首页"  description="">
+    <siteMapNode url="~/library/Order.aspx" title="订购中心"  description="" />
+    <siteMapNode url="~/library/Antibody.aspx" title="抗体库"  description="" />
+    <siteMapNode url="~/library/Plasmid.aspx" title="质粒库"  description="" />
+  </siteMapNode>
+</siteMap>

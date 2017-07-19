@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="/App_script/JavaScriptDefault.js"></script>
+    <link href="App_style/CssDefault.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+    <div id="divmst_topbar">
+        <div class="safewidth alr">
+            <asp:Label ID="LUser" runat="server" Text="用户" Visible="false" CssClass="luser"></asp:Label>
+             <a id="a_setfav" onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+        </div>
+
+    </div>
+    <div class ="safewidth">
+        <div id="divmst_logo">
+            <img src="/App_img/head.jpg" />
+        </div>
+        
+        <asp:BulletedList ID="BLNav" runat="server" DisplayMode="HyperLink">
+            <asp:ListItem Value="/Default.aspx">主页</asp:ListItem>
+            <asp:ListItem Value="/library/Order.aspx">订购系统</asp:ListItem>
+            <asp:ListItem Value="/library/Antibody.aspx">抗体库</asp:ListItem>
+            <asp:ListItem Value="/library/Plasmid.aspx">质粒库</asp:ListItem>
+        </asp:BulletedList>
+        
+        <div>
+            <asp:ContentPlaceHolder id="CPH1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="divmst_hyperlink">
+            <div id="divmst_label">
+            <asp:Label runat="server" Text="链接"></asp:Label>
+            </div>
+            <asp:BulletedList ID="blhyperlink1" runat="server" CssClass="blhyperlink" DisplayMode="HyperLink">
+                <asp:ListItem Value="http://121.192.179.196:8080/">仓库管理中心</asp:ListItem>
+                <asp:ListItem Value="http://lac.xmu.edu.cn/">实验动物中心</asp:ListItem>
+                <asp:ListItem Value="http://121.192.179.197">仪器预约</asp:ListItem>
+            </asp:BulletedList>
+            <asp:BulletedList ID="blhyperlink2" CssClass="blhyperlink" runat="server" DisplayMode="HyperLink">
+                <asp:ListItem Value="https://www.ncbi.nlm.nih.gov/">NCBI</asp:ListItem>
+                <asp:ListItem Value="http://www.uniprot.org/">UniProt</asp:ListItem>
+                <asp:ListItem Value="https://xue.glgoo.org/">Google Scholar</asp:ListItem>
+            </asp:BulletedList>
+            <asp:BulletedList ID="blhyperlink3" CssClass="blhyperlink" runat="server" DisplayMode="HyperLink">
+                <asp:ListItem Value="https://www.biolegend.com/">BioLegend</asp:ListItem>
+                <asp:ListItem Value="https://www.cellsignal.com/">CST</asp:ListItem>
+                <asp:ListItem Value="https://www.ptglab.com/">proteintech</asp:ListItem>
+            </asp:BulletedList>
+            <asp:BulletedList ID="BulletedList4" CssClass="blhyperlink" runat="server" DisplayMode="HyperLink">
+                <asp:ListItem Value="http://www.sangon.com/">生工生物</asp:ListItem>
+                <asp:ListItem Value="https://www.jax.org/jax-mice-and-services">JAX mice</asp:ListItem>
+                <asp:ListItem Value="https://www.researchgate.net/">researchgate</asp:ListItem>
+            </asp:BulletedList>
+            <div class="clr"></div>
+        </div>
+    </div>
+    <div id="divmst_bottombar">
+        <div class="safewidth">
+            <p class="luser"><%=DateTime.Now.ToString()%></p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
