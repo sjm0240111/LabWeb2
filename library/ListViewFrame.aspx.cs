@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -32,7 +32,7 @@ public partial class Library_testlistview : System.Web.UI.Page
         {
             SuperConn scnn = new SuperConn("OrderData.accdb");
             scnn.Open();
-            string _sql = "INSERT INTO T_order (O_ordertime, O_orderer, O_name, O_brand, O_item, O_number, O_note, O_edit) VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + tborderer.Text + "', '" + tbname.Text + "', '" + tbbrand.Text + "', '" + tbitem.Text + "', '" + tbnumber.Text + "', '" + tbnote.Text + "', TRUE)";
+            string _sql = "INSERT INTO T_order (O_ordertime, O_orderer, O_name, O_brand, O_item, O_number, O_note, O_edit) VALUES ('" + DateTime.Now.ToShortDateString() + "', '" + Session["user"] + "', '" + tbname.Text + "', '" + tbbrand.Text + "', '" + tbitem.Text + "', '" + tbnumber.Text + "', '" + tbnote.Text + "', True)";
             OleDbCommand cmd = new OleDbCommand(_sql, scnn.cnn);
             int i = cmd.ExecuteNonQuery();
             scnn.Close();

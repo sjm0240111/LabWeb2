@@ -31,6 +31,8 @@
             <asp:ListItem Value="/library/Order.aspx">订购系统</asp:ListItem>
             <asp:ListItem Value="/library/Antibody.aspx">抗体库</asp:ListItem>
             <asp:ListItem Value="/library/Plasmid.aspx">质粒库</asp:ListItem>
+            <asp:ListItem Value="/library/Primer.aspx">引物合成</asp:ListItem>
+            <asp:ListItem Value="/library/Sequencing.aspx">测序</asp:ListItem>
         </asp:BulletedList>
         
         <div>

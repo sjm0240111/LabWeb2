@@ -160,7 +160,7 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <div class="divpager">
-              <asp:DataPager ID="DataPager1" runat="server" PagedControlID="lvorder" PageSize="5">
+              <asp:DataPager ID="DataPager1" runat="server" PagedControlID="lvorder" PageSize="10">
                 <Fields>
                     <asp:NextPreviousPagerField ButtonType="Link" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
                     <asp:NumericPagerField ButtonType="Link" />

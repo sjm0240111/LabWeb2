@@ -16,9 +16,9 @@
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                     <asp:BoundField DataField="A_id" HeaderText="A_id" SortExpression="A_id" InsertVisible="False" ReadOnly="True" Visible="False" />
-                    <asp:BoundField DataField="A_no" HeaderText="A_no" SortExpression="A_no" />
-                    <asp:BoundField DataField="A_name" HeaderText="A_name" SortExpression="A_name" />
-                    <asp:BoundField DataField="A_background" HeaderText="A_background" SortExpression="A_background" />
+                    <asp:BoundField DataField="A_no" HeaderText="货号" SortExpression="A_no" />
+                    <asp:BoundField DataField="A_name" HeaderText="名称" SortExpression="A_name" />
+                    <asp:BoundField DataField="A_background" HeaderText="背景" SortExpression="A_background" />
                 </Columns>
                 <EmptyDataTemplate>
                     <span> 无记录！</span>
